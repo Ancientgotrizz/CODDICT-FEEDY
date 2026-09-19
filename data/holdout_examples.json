@@ -1,0 +1,18 @@
+[
+  {"text": "Honestly one of the smoothest check-ins I have ever had, and the room upgrade was a lovely surprise.", "label": "Excellent"},
+  {"text": "The delivery arrived earlier than promised and the packaging was immaculate, could not be happier.", "label": "Excellent"},
+  {"text": "My trainer pushed me exactly the right amount and I have already seen real progress, this gym is fantastic.", "label": "Excellent"},
+  {"text": "The stylist listened carefully to what I wanted and the result was better than I imagined, absolutely thrilled.", "label": "Excellent"},
+  {"text": "Overall a pleasant stay, though the breakfast options were a little limited for the price.", "label": "Good"},
+  {"text": "The delivery was on time and the item was as described, just wish tracking updates were more frequent.", "label": "Good"},
+  {"text": "Good session overall, the equipment was clean though the class was a bit more crowded than expected.", "label": "Good"},
+  {"text": "Happy with the haircut, though the wait time was longer than my appointment slot suggested.", "label": "Good"},
+  {"text": "The refund was processed correctly but it took four separate emails to get there. Please simplify.", "label": "Need Improvements"},
+  {"text": "The package arrived intact but a day later than the estimate given at checkout.", "label": "Need Improvements"},
+  {"text": "The gym is fine but the locker room could really use better ventilation and cleaning.", "label": "Need Improvements"},
+  {"text": "The color came out close to what I asked for, but the front desk booking process needs to be clearer.", "label": "Need Improvements"},
+  {"text": "Absolutely furious, the technician cancelled twice without notice and I took two days off for nothing.", "label": "Poor"},
+  {"text": "My package never arrived and support has not responded to any of my three messages this week.", "label": "Poor"},
+  {"text": "Cancelled my membership after being charged twice for the same month with no resolution offered.", "label": "Poor"},
+  {"text": "Extremely disappointed, the stylist ignored my instructions completely and I am left with a result I hate.", "label": "Poor"}
+]

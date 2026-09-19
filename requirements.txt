@@ -1,0 +1,16 @@
+streamlit
+plotly
+pandas
+pypdf
+pdf2image
+pytesseract
+Pillow
+sentence-transformers
+langchain-huggingface
+faiss-cpu
+langchain-community
+langchain-ollama
+langchain-core
+pydantic
+python-dotenv
+reportlab
