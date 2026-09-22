@@ -1,42 +1,1202 @@
 [
-  {"text": "The serum absorbed quickly, left my skin comfortable and glowing, and the results exceeded what I expected. I would definitely recommend it and buy it again.", "label": "Excellent"},
-  {"text": "I am thrilled with this product, my skin looks brighter and feels healthier within just a few days of use.", "label": "Excellent"},
-  {"text": "Fantastic results, no irritation at all, and my skin has never looked this radiant. Five stars.", "label": "Excellent"},
-  {"text": "This exceeded every expectation I had. The texture is lovely and the results were visible almost immediately.", "label": "Excellent"},
-  {"text": "My skin has never felt this good. I am absolutely delighted and have already told my friends about it.", "label": "Excellent"},
-  {"text": "Outstanding product, fast results, and a wonderful lightweight feel on the skin. Highly recommend.", "label": "Excellent"},
-  {"text": "I repurchased immediately because the results were so impressive. Worth every penny.", "label": "Excellent"},
-  {"text": "Perfect for my sensitive skin, no irritation whatsoever, only glowing, healthy-looking results.", "label": "Excellent"},
-  {"text": "This is now a permanent part of my daily routine. Amazing product that truly delivers.", "label": "Excellent"},
-  {"text": "Everyone has commented on how great my skin looks since I started using this serum. Incredible.", "label": "Excellent"},
-  {"text": "The serum works well and keeps my skin hydrated. The fragrance is slightly strong, but overall I am happy and would recommend it.", "label": "Good"},
-  {"text": "Overall a pleasant experience, though the packaging could be a little sturdier. Happy with the results so far.", "label": "Good"},
-  {"text": "I like the results so far, a solid product with minor room to improve on the scent.", "label": "Good"},
-  {"text": "Good value for money, my skin feels noticeably softer after two weeks of consistent use.", "label": "Good"},
-  {"text": "Satisfied with the results, though it took a little longer to notice a difference than I expected.", "label": "Good"},
-  {"text": "Works as advertised, nothing extraordinary but reliable and consistent. Would consider buying again.", "label": "Good"},
-  {"text": "Happy with my purchase overall, the only downside is the bottle is a bit small for the price.", "label": "Good"},
-  {"text": "Decent product, the texture is nice even if the scent is a little strong for my taste.", "label": "Good"},
-  {"text": "My skin feels better overall and this has been a good addition to my evening routine.", "label": "Good"},
-  {"text": "Positive experience overall, with just minor reservations about the price point for the size.", "label": "Good"},
-  {"text": "The serum takes too long to absorb and leaves a sticky feeling. The product has potential, but the application experience needs improvement.", "label": "Need Improvements"},
-  {"text": "The results were modest, I expected more given the price point of this product.", "label": "Need Improvements"},
-  {"text": "A specific issue: the pump dispenser often gets stuck and wastes product. The serum itself is fine.", "label": "Need Improvements"},
-  {"text": "Good idea but the execution needs some refinement, especially around the strong fragrance.", "label": "Need Improvements"},
-  {"text": "The packaging leaks slightly during travel, otherwise the product performs as expected.", "label": "Need Improvements"},
-  {"text": "It works, but more slowly than I would like given how much it costs.", "label": "Need Improvements"},
-  {"text": "The texture is a bit heavy for daytime use, could be reformulated to feel lighter.", "label": "Need Improvements"},
-  {"text": "Needs a better applicator, the rest of the product is acceptable and does help with hydration.", "label": "Need Improvements"},
-  {"text": "Mild results so far, would appreciate clearer usage instructions on the packaging.", "label": "Need Improvements"},
-  {"text": "The bottle design makes it hard to get the last bit of product out, which is a bit wasteful.", "label": "Need Improvements"},
-  {"text": "The serum caused irritation and I had to stop using it. I am very disappointed and would not recommend this product.", "label": "Poor"},
-  {"text": "Absolutely furious, this caused a skin reaction and no one from support responded to my complaint.", "label": "Poor"},
-  {"text": "Waste of money, the product did nothing for my skin after a full month of daily use.", "label": "Poor"},
-  {"text": "Terrible experience overall, I want a refund immediately and will not be buying again.", "label": "Poor"},
-  {"text": "This broke me out badly within days, I will not be purchasing this brand again.", "label": "Poor"},
-  {"text": "Very disappointed, the product arrived damaged and customer support was unhelpful throughout.", "label": "Poor"},
-  {"text": "I regret this purchase entirely, it made my skin condition noticeably worse.", "label": "Poor"},
-  {"text": "Awful smell and no visible results after several weeks of consistent use. Not recommended.", "label": "Poor"},
-  {"text": "Customer service ignored my complaint for over a week, which is completely unacceptable.", "label": "Poor"},
-  {"text": "This product caused a painful reaction on my skin, extremely upset about the whole experience.", "label": "Poor"}
+  {
+    "text": "The booking was remarkably smooth from start to finish, and I would gladly use this service again.",
+    "label": "Excellent"
+  },
+  {
+    "text": "Everything about the booking exceeded my expectations, and I have already recommended it to others.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The team handled the booking with care and precision, leaving me genuinely delighted.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I could not have asked for a better booking; the experience was effortless and impressive.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The booking was completed quickly, accurately, and with a level of service worth praising.",
+    "label": "Excellent"
+  },
+  {
+    "text": "This was an outstanding booking with clear communication and an excellent final result.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I am thoroughly pleased with the booking and would confidently choose this provider again.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The booking felt thoughtful and professional at every step, which made the whole experience excellent.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The result of the booking was better than promised, and I have nothing meaningful to criticise.",
+    "label": "Excellent"
+  },
+  {
+    "text": "From the first message to the final outcome, the booking was exceptional.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The booking was handled perfectly, and the quality of the outcome was immediately clear.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I was impressed by how easy the booking became once the team took ownership of it.",
+    "label": "Excellent"
+  },
+  {
+    "text": "This is the kind of booking that earns lasting trust and repeat business.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The service made the booking feel simple, reliable, and genuinely enjoyable.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I am very satisfied with the booking; it delivered exactly what I hoped for and more.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The delivery was remarkably smooth from start to finish, and I would gladly use this service again.",
+    "label": "Excellent"
+  },
+  {
+    "text": "Everything about the delivery exceeded my expectations, and I have already recommended it to others.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The team handled the delivery with care and precision, leaving me genuinely delighted.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I could not have asked for a better delivery; the experience was effortless and impressive.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The delivery was completed quickly, accurately, and with a level of service worth praising.",
+    "label": "Excellent"
+  },
+  {
+    "text": "This was an outstanding delivery with clear communication and an excellent final result.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I am thoroughly pleased with the delivery and would confidently choose this provider again.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The delivery felt thoughtful and professional at every step, which made the whole experience excellent.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The result of the delivery was better than promised, and I have nothing meaningful to criticise.",
+    "label": "Excellent"
+  },
+  {
+    "text": "From the first message to the final outcome, the delivery was exceptional.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The delivery was handled perfectly, and the quality of the outcome was immediately clear.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I was impressed by how easy the delivery became once the team took ownership of it.",
+    "label": "Excellent"
+  },
+  {
+    "text": "This is the kind of delivery that earns lasting trust and repeat business.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The service made the delivery feel simple, reliable, and genuinely enjoyable.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I am very satisfied with the delivery; it delivered exactly what I hoped for and more.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The membership was remarkably smooth from start to finish, and I would gladly use this service again.",
+    "label": "Excellent"
+  },
+  {
+    "text": "Everything about the membership exceeded my expectations, and I have already recommended it to others.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The team handled the membership with care and precision, leaving me genuinely delighted.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I could not have asked for a better membership; the experience was effortless and impressive.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The membership was completed quickly, accurately, and with a level of service worth praising.",
+    "label": "Excellent"
+  },
+  {
+    "text": "This was an outstanding membership with clear communication and an excellent final result.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I am thoroughly pleased with the membership and would confidently choose this provider again.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The membership felt thoughtful and professional at every step, which made the whole experience excellent.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The result of the membership was better than promised, and I have nothing meaningful to criticise.",
+    "label": "Excellent"
+  },
+  {
+    "text": "From the first message to the final outcome, the membership was exceptional.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The membership was handled perfectly, and the quality of the outcome was immediately clear.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I was impressed by how easy the membership became once the team took ownership of it.",
+    "label": "Excellent"
+  },
+  {
+    "text": "This is the kind of membership that earns lasting trust and repeat business.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The service made the membership feel simple, reliable, and genuinely enjoyable.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I am very satisfied with the membership; it delivered exactly what I hoped for and more.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The support request was remarkably smooth from start to finish, and I would gladly use this service again.",
+    "label": "Excellent"
+  },
+  {
+    "text": "Everything about the support request exceeded my expectations, and I have already recommended it to others.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The team handled the support request with care and precision, leaving me genuinely delighted.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I could not have asked for a better support request; the experience was effortless and impressive.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The support request was completed quickly, accurately, and with a level of service worth praising.",
+    "label": "Excellent"
+  },
+  {
+    "text": "This was an outstanding support request with clear communication and an excellent final result.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I am thoroughly pleased with the support request and would confidently choose this provider again.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The support request felt thoughtful and professional at every step, which made the whole experience excellent.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The result of the support request was better than promised, and I have nothing meaningful to criticise.",
+    "label": "Excellent"
+  },
+  {
+    "text": "From the first message to the final outcome, the support request was exceptional.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The support request was handled perfectly, and the quality of the outcome was immediately clear.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I was impressed by how easy the support request became once the team took ownership of it.",
+    "label": "Excellent"
+  },
+  {
+    "text": "This is the kind of support request that earns lasting trust and repeat business.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The service made the support request feel simple, reliable, and genuinely enjoyable.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I am very satisfied with the support request; it delivered exactly what I hoped for and more.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The purchase was remarkably smooth from start to finish, and I would gladly use this service again.",
+    "label": "Excellent"
+  },
+  {
+    "text": "Everything about the purchase exceeded my expectations, and I have already recommended it to others.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The team handled the purchase with care and precision, leaving me genuinely delighted.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I could not have asked for a better purchase; the experience was effortless and impressive.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The purchase was completed quickly, accurately, and with a level of service worth praising.",
+    "label": "Excellent"
+  },
+  {
+    "text": "This was an outstanding purchase with clear communication and an excellent final result.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I am thoroughly pleased with the purchase and would confidently choose this provider again.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The purchase felt thoughtful and professional at every step, which made the whole experience excellent.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The result of the purchase was better than promised, and I have nothing meaningful to criticise.",
+    "label": "Excellent"
+  },
+  {
+    "text": "From the first message to the final outcome, the purchase was exceptional.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The purchase was handled perfectly, and the quality of the outcome was immediately clear.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I was impressed by how easy the purchase became once the team took ownership of it.",
+    "label": "Excellent"
+  },
+  {
+    "text": "This is the kind of purchase that earns lasting trust and repeat business.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The service made the purchase feel simple, reliable, and genuinely enjoyable.",
+    "label": "Excellent"
+  },
+  {
+    "text": "I am very satisfied with the purchase; it delivered exactly what I hoped for and more.",
+    "label": "Excellent"
+  },
+  {
+    "text": "The booking went well overall, with only a small inconvenience that did not change my positive impression.",
+    "label": "Good"
+  },
+  {
+    "text": "I was satisfied with the booking, although one minor detail could be made clearer.",
+    "label": "Good"
+  },
+  {
+    "text": "The booking met my expectations and the outcome was dependable, even if not remarkable.",
+    "label": "Good"
+  },
+  {
+    "text": "Overall the booking was positive, but the process had a little avoidable friction.",
+    "label": "Good"
+  },
+  {
+    "text": "The team completed the booking correctly, though a modest improvement would make it stronger.",
+    "label": "Good"
+  },
+  {
+    "text": "I am happy with the booking; the main result was good despite a minor reservation.",
+    "label": "Good"
+  },
+  {
+    "text": "The booking was reliable and reasonably efficient, with some room to polish the experience.",
+    "label": "Good"
+  },
+  {
+    "text": "I would use the service again after this booking, although a few details could be improved.",
+    "label": "Good"
+  },
+  {
+    "text": "The outcome of the booking was satisfactory, with a small issue that was easy to overlook.",
+    "label": "Good"
+  },
+  {
+    "text": "The booking was handled well enough, but the communication could have been more consistent.",
+    "label": "Good"
+  },
+  {
+    "text": "I had a good experience with the booking, even though it took slightly longer than expected.",
+    "label": "Good"
+  },
+  {
+    "text": "The booking delivered what I needed and left me generally pleased.",
+    "label": "Good"
+  },
+  {
+    "text": "The process for the booking was acceptable and the final result was useful.",
+    "label": "Good"
+  },
+  {
+    "text": "I am mostly satisfied with the booking; one minor weakness kept it from being excellent.",
+    "label": "Good"
+  },
+  {
+    "text": "The booking worked as expected, with only modest changes needed for a better experience.",
+    "label": "Good"
+  },
+  {
+    "text": "The delivery went well overall, with only a small inconvenience that did not change my positive impression.",
+    "label": "Good"
+  },
+  {
+    "text": "I was satisfied with the delivery, although one minor detail could be made clearer.",
+    "label": "Good"
+  },
+  {
+    "text": "The delivery met my expectations and the outcome was dependable, even if not remarkable.",
+    "label": "Good"
+  },
+  {
+    "text": "Overall the delivery was positive, but the process had a little avoidable friction.",
+    "label": "Good"
+  },
+  {
+    "text": "The team completed the delivery correctly, though a modest improvement would make it stronger.",
+    "label": "Good"
+  },
+  {
+    "text": "I am happy with the delivery; the main result was good despite a minor reservation.",
+    "label": "Good"
+  },
+  {
+    "text": "The delivery was reliable and reasonably efficient, with some room to polish the experience.",
+    "label": "Good"
+  },
+  {
+    "text": "I would use the service again after this delivery, although a few details could be improved.",
+    "label": "Good"
+  },
+  {
+    "text": "The outcome of the delivery was satisfactory, with a small issue that was easy to overlook.",
+    "label": "Good"
+  },
+  {
+    "text": "The delivery was handled well enough, but the communication could have been more consistent.",
+    "label": "Good"
+  },
+  {
+    "text": "I had a good experience with the delivery, even though it took slightly longer than expected.",
+    "label": "Good"
+  },
+  {
+    "text": "The delivery delivered what I needed and left me generally pleased.",
+    "label": "Good"
+  },
+  {
+    "text": "The process for the delivery was acceptable and the final result was useful.",
+    "label": "Good"
+  },
+  {
+    "text": "I am mostly satisfied with the delivery; one minor weakness kept it from being excellent.",
+    "label": "Good"
+  },
+  {
+    "text": "The delivery worked as expected, with only modest changes needed for a better experience.",
+    "label": "Good"
+  },
+  {
+    "text": "The membership went well overall, with only a small inconvenience that did not change my positive impression.",
+    "label": "Good"
+  },
+  {
+    "text": "I was satisfied with the membership, although one minor detail could be made clearer.",
+    "label": "Good"
+  },
+  {
+    "text": "The membership met my expectations and the outcome was dependable, even if not remarkable.",
+    "label": "Good"
+  },
+  {
+    "text": "Overall the membership was positive, but the process had a little avoidable friction.",
+    "label": "Good"
+  },
+  {
+    "text": "The team completed the membership correctly, though a modest improvement would make it stronger.",
+    "label": "Good"
+  },
+  {
+    "text": "I am happy with the membership; the main result was good despite a minor reservation.",
+    "label": "Good"
+  },
+  {
+    "text": "The membership was reliable and reasonably efficient, with some room to polish the experience.",
+    "label": "Good"
+  },
+  {
+    "text": "I would use the service again after this membership, although a few details could be improved.",
+    "label": "Good"
+  },
+  {
+    "text": "The outcome of the membership was satisfactory, with a small issue that was easy to overlook.",
+    "label": "Good"
+  },
+  {
+    "text": "The membership was handled well enough, but the communication could have been more consistent.",
+    "label": "Good"
+  },
+  {
+    "text": "I had a good experience with the membership, even though it took slightly longer than expected.",
+    "label": "Good"
+  },
+  {
+    "text": "The membership delivered what I needed and left me generally pleased.",
+    "label": "Good"
+  },
+  {
+    "text": "The process for the membership was acceptable and the final result was useful.",
+    "label": "Good"
+  },
+  {
+    "text": "I am mostly satisfied with the membership; one minor weakness kept it from being excellent.",
+    "label": "Good"
+  },
+  {
+    "text": "The membership worked as expected, with only modest changes needed for a better experience.",
+    "label": "Good"
+  },
+  {
+    "text": "The support request went well overall, with only a small inconvenience that did not change my positive impression.",
+    "label": "Good"
+  },
+  {
+    "text": "I was satisfied with the support request, although one minor detail could be made clearer.",
+    "label": "Good"
+  },
+  {
+    "text": "The support request met my expectations and the outcome was dependable, even if not remarkable.",
+    "label": "Good"
+  },
+  {
+    "text": "Overall the support request was positive, but the process had a little avoidable friction.",
+    "label": "Good"
+  },
+  {
+    "text": "The team completed the support request correctly, though a modest improvement would make it stronger.",
+    "label": "Good"
+  },
+  {
+    "text": "I am happy with the support request; the main result was good despite a minor reservation.",
+    "label": "Good"
+  },
+  {
+    "text": "The support request was reliable and reasonably efficient, with some room to polish the experience.",
+    "label": "Good"
+  },
+  {
+    "text": "I would use the service again after this support request, although a few details could be improved.",
+    "label": "Good"
+  },
+  {
+    "text": "The outcome of the support request was satisfactory, with a small issue that was easy to overlook.",
+    "label": "Good"
+  },
+  {
+    "text": "The support request was handled well enough, but the communication could have been more consistent.",
+    "label": "Good"
+  },
+  {
+    "text": "I had a good experience with the support request, even though it took slightly longer than expected.",
+    "label": "Good"
+  },
+  {
+    "text": "The support request delivered what I needed and left me generally pleased.",
+    "label": "Good"
+  },
+  {
+    "text": "The process for the support request was acceptable and the final result was useful.",
+    "label": "Good"
+  },
+  {
+    "text": "I am mostly satisfied with the support request; one minor weakness kept it from being excellent.",
+    "label": "Good"
+  },
+  {
+    "text": "The support request worked as expected, with only modest changes needed for a better experience.",
+    "label": "Good"
+  },
+  {
+    "text": "The purchase went well overall, with only a small inconvenience that did not change my positive impression.",
+    "label": "Good"
+  },
+  {
+    "text": "I was satisfied with the purchase, although one minor detail could be made clearer.",
+    "label": "Good"
+  },
+  {
+    "text": "The purchase met my expectations and the outcome was dependable, even if not remarkable.",
+    "label": "Good"
+  },
+  {
+    "text": "Overall the purchase was positive, but the process had a little avoidable friction.",
+    "label": "Good"
+  },
+  {
+    "text": "The team completed the purchase correctly, though a modest improvement would make it stronger.",
+    "label": "Good"
+  },
+  {
+    "text": "I am happy with the purchase; the main result was good despite a minor reservation.",
+    "label": "Good"
+  },
+  {
+    "text": "The purchase was reliable and reasonably efficient, with some room to polish the experience.",
+    "label": "Good"
+  },
+  {
+    "text": "I would use the service again after this purchase, although a few details could be improved.",
+    "label": "Good"
+  },
+  {
+    "text": "The outcome of the purchase was satisfactory, with a small issue that was easy to overlook.",
+    "label": "Good"
+  },
+  {
+    "text": "The purchase was handled well enough, but the communication could have been more consistent.",
+    "label": "Good"
+  },
+  {
+    "text": "I had a good experience with the purchase, even though it took slightly longer than expected.",
+    "label": "Good"
+  },
+  {
+    "text": "The purchase delivered what I needed and left me generally pleased.",
+    "label": "Good"
+  },
+  {
+    "text": "The process for the purchase was acceptable and the final result was useful.",
+    "label": "Good"
+  },
+  {
+    "text": "I am mostly satisfied with the purchase; one minor weakness kept it from being excellent.",
+    "label": "Good"
+  },
+  {
+    "text": "The purchase worked as expected, with only modest changes needed for a better experience.",
+    "label": "Good"
+  },
+  {
+    "text": "The booking eventually worked, but a specific process problem should be addressed.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I can see potential in the booking, although the current experience needs several practical improvements.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The result of the booking was mixed because an avoidable issue made the process harder than necessary.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The booking was completed, but unclear instructions caused unnecessary effort.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I was not fully satisfied with the booking; the main service is useful but needs refinement.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The booking had a meaningful weakness that should be corrected before I would recommend it confidently.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The outcome of the booking was only partly successful, and the supporting process needs attention.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The booking showed a good idea but poor execution in one important area.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I received the expected result from the booking, though the delays and gaps in communication need work.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The booking was frustrating in places because a straightforward step was not handled clearly.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I would consider using the service again after the problems with this booking are addressed.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The booking was adequate, but the recurring inconvenience should not be ignored.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The main outcome of the booking was acceptable while the surrounding experience needs improvement.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The booking did not fail completely, but several details reduced my confidence in the service.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I found the booking below the standard I expected and would like to see concrete changes.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The delivery eventually worked, but a specific process problem should be addressed.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I can see potential in the delivery, although the current experience needs several practical improvements.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The result of the delivery was mixed because an avoidable issue made the process harder than necessary.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The delivery was completed, but unclear instructions caused unnecessary effort.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I was not fully satisfied with the delivery; the main service is useful but needs refinement.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The delivery had a meaningful weakness that should be corrected before I would recommend it confidently.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The outcome of the delivery was only partly successful, and the supporting process needs attention.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The delivery showed a good idea but poor execution in one important area.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I received the expected result from the delivery, though the delays and gaps in communication need work.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The delivery was frustrating in places because a straightforward step was not handled clearly.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I would consider using the service again after the problems with this delivery are addressed.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The delivery was adequate, but the recurring inconvenience should not be ignored.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The main outcome of the delivery was acceptable while the surrounding experience needs improvement.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The delivery did not fail completely, but several details reduced my confidence in the service.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I found the delivery below the standard I expected and would like to see concrete changes.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The membership eventually worked, but a specific process problem should be addressed.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I can see potential in the membership, although the current experience needs several practical improvements.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The result of the membership was mixed because an avoidable issue made the process harder than necessary.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The membership was completed, but unclear instructions caused unnecessary effort.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I was not fully satisfied with the membership; the main service is useful but needs refinement.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The membership had a meaningful weakness that should be corrected before I would recommend it confidently.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The outcome of the membership was only partly successful, and the supporting process needs attention.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The membership showed a good idea but poor execution in one important area.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I received the expected result from the membership, though the delays and gaps in communication need work.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The membership was frustrating in places because a straightforward step was not handled clearly.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I would consider using the service again after the problems with this membership are addressed.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The membership was adequate, but the recurring inconvenience should not be ignored.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The main outcome of the membership was acceptable while the surrounding experience needs improvement.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The membership did not fail completely, but several details reduced my confidence in the service.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I found the membership below the standard I expected and would like to see concrete changes.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The support request eventually worked, but a specific process problem should be addressed.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I can see potential in the support request, although the current experience needs several practical improvements.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The result of the support request was mixed because an avoidable issue made the process harder than necessary.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The support request was completed, but unclear instructions caused unnecessary effort.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I was not fully satisfied with the support request; the main service is useful but needs refinement.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The support request had a meaningful weakness that should be corrected before I would recommend it confidently.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The outcome of the support request was only partly successful, and the supporting process needs attention.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The support request showed a good idea but poor execution in one important area.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I received the expected result from the support request, though the delays and gaps in communication need work.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The support request was frustrating in places because a straightforward step was not handled clearly.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I would consider using the service again after the problems with this support request are addressed.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The support request was adequate, but the recurring inconvenience should not be ignored.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The main outcome of the support request was acceptable while the surrounding experience needs improvement.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The support request did not fail completely, but several details reduced my confidence in the service.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I found the support request below the standard I expected and would like to see concrete changes.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The purchase eventually worked, but a specific process problem should be addressed.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I can see potential in the purchase, although the current experience needs several practical improvements.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The result of the purchase was mixed because an avoidable issue made the process harder than necessary.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The purchase was completed, but unclear instructions caused unnecessary effort.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I was not fully satisfied with the purchase; the main service is useful but needs refinement.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The purchase had a meaningful weakness that should be corrected before I would recommend it confidently.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The outcome of the purchase was only partly successful, and the supporting process needs attention.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The purchase showed a good idea but poor execution in one important area.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I received the expected result from the purchase, though the delays and gaps in communication need work.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The purchase was frustrating in places because a straightforward step was not handled clearly.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I would consider using the service again after the problems with this purchase are addressed.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The purchase was adequate, but the recurring inconvenience should not be ignored.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The main outcome of the purchase was acceptable while the surrounding experience needs improvement.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The purchase did not fail completely, but several details reduced my confidence in the service.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "I found the purchase below the standard I expected and would like to see concrete changes.",
+    "label": "Need Improvements"
+  },
+  {
+    "text": "The booking was a serious disappointment, and I do not intend to use this service again.",
+    "label": "Poor"
+  },
+  {
+    "text": "I am extremely unhappy with the booking; the failure caused real inconvenience and no useful resolution.",
+    "label": "Poor"
+  },
+  {
+    "text": "The booking went badly from the beginning, and the response afterward made the situation worse.",
+    "label": "Poor"
+  },
+  {
+    "text": "This was an unacceptable booking that left me frustrated and unwilling to recommend the provider.",
+    "label": "Poor"
+  },
+  {
+    "text": "The outcome of the booking was completely unsatisfactory, with a problem that should never have happened.",
+    "label": "Poor"
+  },
+  {
+    "text": "I regret relying on this service for the booking because the result was damaging and poorly handled.",
+    "label": "Poor"
+  },
+  {
+    "text": "The booking failed in an important way, and repeated attempts to get help achieved nothing.",
+    "label": "Poor"
+  },
+  {
+    "text": "I was deeply disappointed by the booking and have lost confidence in this provider.",
+    "label": "Poor"
+  },
+  {
+    "text": "The booking created a severe problem, followed by communication that did not resolve it.",
+    "label": "Poor"
+  },
+  {
+    "text": "This booking was far below an acceptable standard and left me certain I will not return.",
+    "label": "Poor"
+  },
+  {
+    "text": "The provider mishandled the booking, and the experience was stressful rather than useful.",
+    "label": "Poor"
+  },
+  {
+    "text": "I cannot recommend this service after such a poor booking and lack of accountability.",
+    "label": "Poor"
+  },
+  {
+    "text": "The booking was a complete failure in my view, with no satisfactory outcome offered.",
+    "label": "Poor"
+  },
+  {
+    "text": "I expected basic reliability from the booking, but the result was seriously flawed.",
+    "label": "Poor"
+  },
+  {
+    "text": "The problems with the booking were severe enough that I would actively advise others to avoid it.",
+    "label": "Poor"
+  },
+  {
+    "text": "The delivery was a serious disappointment, and I do not intend to use this service again.",
+    "label": "Poor"
+  },
+  {
+    "text": "I am extremely unhappy with the delivery; the failure caused real inconvenience and no useful resolution.",
+    "label": "Poor"
+  },
+  {
+    "text": "The delivery went badly from the beginning, and the response afterward made the situation worse.",
+    "label": "Poor"
+  },
+  {
+    "text": "This was an unacceptable delivery that left me frustrated and unwilling to recommend the provider.",
+    "label": "Poor"
+  },
+  {
+    "text": "The outcome of the delivery was completely unsatisfactory, with a problem that should never have happened.",
+    "label": "Poor"
+  },
+  {
+    "text": "I regret relying on this service for the delivery because the result was damaging and poorly handled.",
+    "label": "Poor"
+  },
+  {
+    "text": "The delivery failed in an important way, and repeated attempts to get help achieved nothing.",
+    "label": "Poor"
+  },
+  {
+    "text": "I was deeply disappointed by the delivery and have lost confidence in this provider.",
+    "label": "Poor"
+  },
+  {
+    "text": "The delivery created a severe problem, followed by communication that did not resolve it.",
+    "label": "Poor"
+  },
+  {
+    "text": "This delivery was far below an acceptable standard and left me certain I will not return.",
+    "label": "Poor"
+  },
+  {
+    "text": "The provider mishandled the delivery, and the experience was stressful rather than useful.",
+    "label": "Poor"
+  },
+  {
+    "text": "I cannot recommend this service after such a poor delivery and lack of accountability.",
+    "label": "Poor"
+  },
+  {
+    "text": "The delivery was a complete failure in my view, with no satisfactory outcome offered.",
+    "label": "Poor"
+  },
+  {
+    "text": "I expected basic reliability from the delivery, but the result was seriously flawed.",
+    "label": "Poor"
+  },
+  {
+    "text": "The problems with the delivery were severe enough that I would actively advise others to avoid it.",
+    "label": "Poor"
+  },
+  {
+    "text": "The membership was a serious disappointment, and I do not intend to use this service again.",
+    "label": "Poor"
+  },
+  {
+    "text": "I am extremely unhappy with the membership; the failure caused real inconvenience and no useful resolution.",
+    "label": "Poor"
+  },
+  {
+    "text": "The membership went badly from the beginning, and the response afterward made the situation worse.",
+    "label": "Poor"
+  },
+  {
+    "text": "This was an unacceptable membership that left me frustrated and unwilling to recommend the provider.",
+    "label": "Poor"
+  },
+  {
+    "text": "The outcome of the membership was completely unsatisfactory, with a problem that should never have happened.",
+    "label": "Poor"
+  },
+  {
+    "text": "I regret relying on this service for the membership because the result was damaging and poorly handled.",
+    "label": "Poor"
+  },
+  {
+    "text": "The membership failed in an important way, and repeated attempts to get help achieved nothing.",
+    "label": "Poor"
+  },
+  {
+    "text": "I was deeply disappointed by the membership and have lost confidence in this provider.",
+    "label": "Poor"
+  },
+  {
+    "text": "The membership created a severe problem, followed by communication that did not resolve it.",
+    "label": "Poor"
+  },
+  {
+    "text": "This membership was far below an acceptable standard and left me certain I will not return.",
+    "label": "Poor"
+  },
+  {
+    "text": "The provider mishandled the membership, and the experience was stressful rather than useful.",
+    "label": "Poor"
+  },
+  {
+    "text": "I cannot recommend this service after such a poor membership and lack of accountability.",
+    "label": "Poor"
+  },
+  {
+    "text": "The membership was a complete failure in my view, with no satisfactory outcome offered.",
+    "label": "Poor"
+  },
+  {
+    "text": "I expected basic reliability from the membership, but the result was seriously flawed.",
+    "label": "Poor"
+  },
+  {
+    "text": "The problems with the membership were severe enough that I would actively advise others to avoid it.",
+    "label": "Poor"
+  },
+  {
+    "text": "The support request was a serious disappointment, and I do not intend to use this service again.",
+    "label": "Poor"
+  },
+  {
+    "text": "I am extremely unhappy with the support request; the failure caused real inconvenience and no useful resolution.",
+    "label": "Poor"
+  },
+  {
+    "text": "The support request went badly from the beginning, and the response afterward made the situation worse.",
+    "label": "Poor"
+  },
+  {
+    "text": "This was an unacceptable support request that left me frustrated and unwilling to recommend the provider.",
+    "label": "Poor"
+  },
+  {
+    "text": "The outcome of the support request was completely unsatisfactory, with a problem that should never have happened.",
+    "label": "Poor"
+  },
+  {
+    "text": "I regret relying on this service for the support request because the result was damaging and poorly handled.",
+    "label": "Poor"
+  },
+  {
+    "text": "The support request failed in an important way, and repeated attempts to get help achieved nothing.",
+    "label": "Poor"
+  },
+  {
+    "text": "I was deeply disappointed by the support request and have lost confidence in this provider.",
+    "label": "Poor"
+  },
+  {
+    "text": "The support request created a severe problem, followed by communication that did not resolve it.",
+    "label": "Poor"
+  },
+  {
+    "text": "This support request was far below an acceptable standard and left me certain I will not return.",
+    "label": "Poor"
+  },
+  {
+    "text": "The provider mishandled the support request, and the experience was stressful rather than useful.",
+    "label": "Poor"
+  },
+  {
+    "text": "I cannot recommend this service after such a poor support request and lack of accountability.",
+    "label": "Poor"
+  },
+  {
+    "text": "The support request was a complete failure in my view, with no satisfactory outcome offered.",
+    "label": "Poor"
+  },
+  {
+    "text": "I expected basic reliability from the support request, but the result was seriously flawed.",
+    "label": "Poor"
+  },
+  {
+    "text": "The problems with the support request were severe enough that I would actively advise others to avoid it.",
+    "label": "Poor"
+  },
+  {
+    "text": "The purchase was a serious disappointment, and I do not intend to use this service again.",
+    "label": "Poor"
+  },
+  {
+    "text": "I am extremely unhappy with the purchase; the failure caused real inconvenience and no useful resolution.",
+    "label": "Poor"
+  },
+  {
+    "text": "The purchase went badly from the beginning, and the response afterward made the situation worse.",
+    "label": "Poor"
+  },
+  {
+    "text": "This was an unacceptable purchase that left me frustrated and unwilling to recommend the provider.",
+    "label": "Poor"
+  },
+  {
+    "text": "The outcome of the purchase was completely unsatisfactory, with a problem that should never have happened.",
+    "label": "Poor"
+  },
+  {
+    "text": "I regret relying on this service for the purchase because the result was damaging and poorly handled.",
+    "label": "Poor"
+  },
+  {
+    "text": "The purchase failed in an important way, and repeated attempts to get help achieved nothing.",
+    "label": "Poor"
+  },
+  {
+    "text": "I was deeply disappointed by the purchase and have lost confidence in this provider.",
+    "label": "Poor"
+  },
+  {
+    "text": "The purchase created a severe problem, followed by communication that did not resolve it.",
+    "label": "Poor"
+  },
+  {
+    "text": "This purchase was far below an acceptable standard and left me certain I will not return.",
+    "label": "Poor"
+  },
+  {
+    "text": "The provider mishandled the purchase, and the experience was stressful rather than useful.",
+    "label": "Poor"
+  },
+  {
+    "text": "I cannot recommend this service after such a poor purchase and lack of accountability.",
+    "label": "Poor"
+  },
+  {
+    "text": "The purchase was a complete failure in my view, with no satisfactory outcome offered.",
+    "label": "Poor"
+  },
+  {
+    "text": "I expected basic reliability from the purchase, but the result was seriously flawed.",
+    "label": "Poor"
+  },
+  {
+    "text": "The problems with the purchase were severe enough that I would actively advise others to avoid it.",
+    "label": "Poor"
+  }
 ]

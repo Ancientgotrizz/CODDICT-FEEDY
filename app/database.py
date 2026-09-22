@@ -1,59 +1,43 @@
-"""
-database.py
-------------
-Feedy's entire database is one CSV file on disk. This module knows how
-to read it and append a new row to it.
+"""Persistence for the latest accuracy evaluation summary."""
 
-NOTE: the original prototype displayed the AI's flagged keywords on
-screen but never saved them to the CSV, so they were lost as soon as
-you left that screen. This version fixes that by adding a
-flagged_keywords column, so the dashboard and history can show them too.
-"""
-
+import json
 import os
 from datetime import datetime
-import pandas as pd
 from app import settings
-
-COLUMN_NAMES = [
-    "timestamp", "source_file", "feedback_text", "category",
-    "llm_confidence", "neighbour_agreement", "final_confidence",
-    "rationale", "flagged_keywords", "needs_review",
-]
-
-
-def load_records():
-    """
-    Returns all saved records as a pandas DataFrame. If the file does not
-    exist yet, returns an empty DataFrame with the right columns so the
-    rest of the app never has to special-case a missing file.
-    """
-    if not os.path.exists(settings.FEEDBACK_RECORDS_FILE):
-        return pd.DataFrame(columns=COLUMN_NAMES)
-    return pd.read_csv(settings.FEEDBACK_RECORDS_FILE)
-
-
-def save_record(source_file, feedback_text, category, llm_confidence,
-                 neighbour_agreement, final_confidence, rationale, flagged_keywords):
-    """Appends one new row to data/feedback_records.csv."""
-    os.makedirs(settings.DATA_DIR, exist_ok=True)
-    existing_records = load_records()
-
-    new_row = {
-        "timestamp": datetime.now().isoformat(timespec="seconds"),
-        "source_file": source_file,
-        "feedback_text": feedback_text,
-        "category": category,
-        "llm_confidence": llm_confidence,
-        "neighbour_agreement": neighbour_agreement,
-        "final_confidence": final_confidence,
-        "rationale": rationale,
-        "flagged_keywords": ", ".join(flagged_keywords) if flagged_keywords else "",
-        "needs_review": final_confidence < settings.REVIEW_THRESHOLD,
+def load_accuracy_results():
+    """Loads persisted accuracy-test results, returning zero-values when absent."""
+    default_results = {
+        "overall_accuracy": 0.0,
+        "correct": 0,
+        "total": 0,
+        "per_category": {
+            "Excellent": {"correct": 0, "total": 0, "accuracy": 0.0},
+            "Good": {"correct": 0, "total": 0, "accuracy": 0.0},
+            "Need Improvements": {"correct": 0, "total": 0, "accuracy": 0.0},
+            "Poor": {"correct": 0, "total": 0, "accuracy": 0.0},
+        },
+        "generated_at": None,
     }
 
-    new_row_df = pd.DataFrame([new_row])
-    updated_records = pd.concat([existing_records, new_row_df], ignore_index=True)
-    updated_records.to_csv(settings.FEEDBACK_RECORDS_FILE, index=False)
+    if not os.path.exists(settings.TEST_RESULTS_FILE):
+        return default_results
 
-    return new_row
+    try:
+        with open(settings.TEST_RESULTS_FILE, "r", encoding="utf-8") as handle:
+            loaded = json.load(handle)
+        for category in default_results["per_category"]:
+            loaded.setdefault("per_category", {}).setdefault(category, {"correct": 0, "total": 0, "accuracy": 0.0})
+        loaded.setdefault("overall_accuracy", 0.0)
+        loaded.setdefault("correct", 0)
+        loaded.setdefault("total", 0)
+        loaded.setdefault("generated_at", None)
+        return loaded
+    except (json.JSONDecodeError, OSError):
+        return default_results
+
+
+def save_accuracy_results(results):
+    """Stores the latest accuracy-test results so the dashboard can read them."""
+    os.makedirs(settings.DATA_DIR, exist_ok=True)
+    with open(settings.TEST_RESULTS_FILE, "w", encoding="utf-8") as handle:
+        json.dump(results, handle, indent=2)

@@ -1,0 +1,28 @@
+{
+  "overall_accuracy": 0.75,
+  "correct": 75,
+  "total": 100,
+  "per_category": {
+    "Excellent": {
+      "correct": 25,
+      "total": 25,
+      "accuracy": 1.0
+    },
+    "Good": {
+      "correct": 14,
+      "total": 25,
+      "accuracy": 0.56
+    },
+    "Need Improvements": {
+      "correct": 11,
+      "total": 25,
+      "accuracy": 0.44
+    },
+    "Poor": {
+      "correct": 25,
+      "total": 25,
+      "accuracy": 1.0
+    }
+  },
+  "generated_at": "2026-09-22T19:35:41"
+}

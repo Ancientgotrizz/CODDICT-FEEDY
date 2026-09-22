@@ -117,8 +117,6 @@ Get-ChildItem -Path . -Recurse -Force -File -Filter *.pyc -ErrorAction SilentlyC
 - `.env.example`.
 - `.env`; preserve it if it was supplied and contains the intended local configuration.
 - `data/labelled_examples.json`.
-- `data/holdout_examples.json`.
-- `data/feedback_records.csv`; it is the application's CSV persistence file.
 - `data/sample_pdfs/`; these are supplied test PDFs.
 - `vector_index/index.faiss` and `vector_index/index.pkl`; both are required by the saved FAISS store.
 - `README.md`, `scripts/`, or any other source/project asset.
@@ -226,7 +224,7 @@ python scripts/build_search_index.py
 
 This reads the labelled examples, downloads/loads the configured Hugging Face embedding model as needed, and overwrites the saved index files. Do not run it merely because the script exists.
 
-Do not run `scripts/generate_sample_pdfs.py` during setup. It generates synthetic PDFs and writes into `data/sample_pdfs/`; the repository already supplies test PDFs. Do not run `scripts/test_accuracy.py` as a startup step; it performs a classification evaluation rather than initialization.
+Do not run `scripts/generate_sample_pdfs.py` during setup. It generates synthetic PDFs and writes into `data/sample_pdfs/`; the repository already supplies test PDFs. Do not run `tests/test_accuracy.py` as a startup step; it performs a classification evaluation rather than initialization.
 
 ### 8. Run the application
 
@@ -375,8 +373,7 @@ Use one of the supplied PDFs in `data/sample_pdfs/` for a smoke test:
 - Estimated confidence appears.
 - A rationale appears.
 - Flagged keywords appear when the model returns them.
-- A row is written to `data/feedback_records.csv`.
-- The `Dashboard` page loads the CSV and displays its metrics, charts, and records.
+- The `Dashboard` page loads the current analysis results and persisted evaluation metrics.
 
 This is a startup smoke test, not a full accuracy evaluation. Do not run the evaluation script as part of normal startup.
 

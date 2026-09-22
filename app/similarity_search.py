@@ -29,10 +29,6 @@ def get_embeddings_model():
 
 
 def build_index_from_labelled_examples():
-    """
-    Reads data/labelled_examples.json, embeds every example, and builds a
-    brand new FAISS index from them, then saves that index to disk.
-    """
     with open(settings.LABELLED_EXAMPLES_FILE, "r", encoding="utf-8") as f:
         examples = json.load(f)
 

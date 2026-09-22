@@ -34,7 +34,7 @@ from app.text_cleaner import extract_feedback_sections
 from app.similarity_search import load_index
 from app.ai_classifier import classify_feedback
 from app.confidence_score import fuse_confidence
-from app.database import save_record, load_records
+from app.database import load_accuracy_results
 
 st.set_page_config(page_title="Feedy - Feedback Classifier", layout="wide")
 
@@ -57,7 +57,7 @@ def get_vector_store():
 # ----------------------------------------------------------------------
 # Sidebar navigation
 # ----------------------------------------------------------------------
-st.sidebar.title("📋 Feedy")
+st.sidebar.title("FΣΣDY")
 st.sidebar.caption("AI-powered satisfaction analysis from PDF feedback forms")
 page = st.sidebar.radio("Go to", ["Upload & Classify", "Dashboard"])
 analysis_state = st.session_state.setdefault(
@@ -92,13 +92,6 @@ def render_analysis_state(state):
     processed_results = state["processed_results"]
     category_counts = state["category_counts"]
     failed_files = state["failed_files"]
-
-    if processed_results:
-        overall_category = max(
-            CATEGORY_ORDER, key=lambda category: category_counts[category]
-        )
-        st.subheader("Overall Product Classification")
-        st.metric("Overall Product Band", overall_category)
 
     st.subheader(
         f"Analysis Summary · {state['file_count']} PDF(s) · "
@@ -259,16 +252,6 @@ if page == "Upload & Classify":
                                     )
                                     needs_review = final_confidence < settings.REVIEW_THRESHOLD
 
-                                    save_record(
-                                        source_file=uploaded_file.name,
-                                        feedback_text=feedback_text,
-                                        category=result.category,
-                                        llm_confidence=result.confidence,
-                                        neighbour_agreement=agreement,
-                                        final_confidence=final_confidence,
-                                        rationale=result.rationale,
-                                        flagged_keywords=result.flagged_keywords,
-                                    )
                                     processed_results.append(
                                         (
                                             uploaded_file.name,
@@ -305,14 +288,53 @@ if page == "Upload & Classify":
 else:
     st.title("Dashboard")
 
-    records = load_records()
+    accuracy_summary = load_accuracy_results()
+    accuracy_total = accuracy_summary.get("total", 0)
+    overall_accuracy = accuracy_summary.get("overall_accuracy", 0.0)
+    per_category = accuracy_summary.get("per_category", {})
 
-    if records.empty:
-        st.info("No classified feedback yet. Go to 'Upload & Classify' to analyse your first PDF.")
+    st.subheader("Model accuracy")
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Overall accuracy", f"{overall_accuracy:.0%}" if accuracy_total else "0%")
+    col2.metric("Total evaluated", accuracy_total)
+    col3.metric("Correct", accuracy_summary.get("correct", 0))
+
+    category_table = []
+    for category in CATEGORY_ORDER:
+        item = per_category.get(category, {})
+        total = item.get("total", 0)
+        correct = item.get("correct", 0)
+        accuracy = item.get("accuracy", 0.0)
+        category_table.append({"Category": category, "Correct": correct, "Total": total, "Accuracy": f"{accuracy:.0%}" if total else "0%"})
+
+    st.dataframe(pd.DataFrame(category_table), width="stretch", hide_index=True)
+    st.divider()
+
+    processed_results = analysis_state.get("processed_results", [])
+
+    if not processed_results:
+        st.info("No current analysis available yet. Go to 'Upload & Classify' and run a batch to view the live results here.")
     else:
-        records["timestamp"] = pd.to_datetime(records["timestamp"])
+        current_rows = []
+        for source_file, feedback_text, result, neighbours, final_confidence, needs_review in processed_results:
+            current_rows.append(
+                {
+                    "source_file": source_file,
+                    "feedback_text": feedback_text,
+                    "category": result.category,
+                    "final_confidence": final_confidence,
+                    "needs_review": needs_review,
+                    "rationale": result.rationale,
+                    "flagged_keywords": ", ".join(result.flagged_keywords) if result.flagged_keywords else "",
+                }
+            )
 
-        # --- Sidebar filters ---
+        current_df = pd.DataFrame(current_rows)
+        category_counts = current_df["category"].value_counts().reindex(CATEGORY_ORDER).fillna(0)
+        total_responses = len(current_df)
+        overall_band = category_counts.idxmax() if total_responses else "N/A"
+        overall_pct = (category_counts.max() / total_responses * 100) if total_responses else 0
+
         st.sidebar.divider()
         st.sidebar.subheader("Filters")
         selected_categories = st.sidebar.multiselect(
@@ -322,42 +344,46 @@ else:
             "Review status", ["All", "Needs review", "No review needed"]
         )
 
-        filtered = records[records["category"].isin(selected_categories)]
+        filtered = current_df[current_df["category"].isin(selected_categories)].copy()
         if review_filter == "Needs review":
             filtered = filtered[filtered["needs_review"] == True]  # noqa: E712
         elif review_filter == "No review needed":
             filtered = filtered[filtered["needs_review"] == False]  # noqa: E712
 
-        # --- KPI metrics ---
         col1, col2, col3, col4 = st.columns(4)
         col1.metric("Total responses", len(filtered))
         col2.metric(
-            "Average Estimated Confidence",
+            "Average confidence",
             f"{filtered['final_confidence'].mean():.0%}" if len(filtered) else "N/A",
         )
         col3.metric("Needs review", int(filtered["needs_review"].sum()))
         col4.metric("Poor", int((filtered["category"] == "Poor").sum()))
 
+        st.subheader("Overall product band")
+        overall_col, mix_col = st.columns([1, 2])
+        with overall_col:
+            st.metric("Overall band", overall_band)
+            st.caption("Formula: dominant band share = count of top band ÷ total responses")
+            st.metric("Top-band share", f"{overall_pct:.0f}%")
+        with mix_col:
+            band_mix = pd.DataFrame(
+                {
+                    "Band": CATEGORY_ORDER,
+                    "Count": [int(category_counts.get(category, 0)) for category in CATEGORY_ORDER],
+                }
+            )
+            band_mix["Share %"] = (band_mix["Count"] / total_responses * 100) if total_responses else 0
+            st.dataframe(
+                band_mix[["Band", "Count", "Share %"]],
+                hide_index=True,
+                width="stretch",
+            )
+
         st.divider()
 
-        # --- Charts ---
-        chart_col1, chart_col2 = st.columns(2)
+        donut_col, trend_col = st.columns(2)
 
-        with chart_col1:
-            category_counts = (
-                filtered["category"].value_counts().reindex(CATEGORY_ORDER).fillna(0)
-            )
-            bar_fig = go.Figure(
-                go.Bar(
-                    x=category_counts.index,
-                    y=category_counts.values,
-                    marker_color=[CATEGORY_COLORS[c] for c in category_counts.index],
-                )
-            )
-            bar_fig.update_layout(title="Responses by category")
-            st.plotly_chart(bar_fig, use_container_width=True)
-
-        with chart_col2:
+        with donut_col:
             donut_fig = go.Figure(
                 go.Pie(
                     labels=category_counts.index,
@@ -366,34 +392,37 @@ else:
                     marker_colors=[CATEGORY_COLORS[c] for c in category_counts.index],
                 )
             )
-            donut_fig.update_layout(title="Category distribution")
-            st.plotly_chart(donut_fig, use_container_width=True)
+            donut_fig.update_layout(title="Current batch category distribution")
+            st.plotly_chart(donut_fig, width="stretch")
 
-        chart_col3, chart_col4 = st.columns(2)
-
-        with chart_col3:
-            daily = filtered.copy()
-            daily["date"] = daily["timestamp"].dt.date
-            trend = daily.groupby("date").size().reset_index(name="count")
-            trend_fig = px.line(trend, x="date", y="count", markers=True, title="Daily volume")
-            st.plotly_chart(trend_fig, use_container_width=True)
-
-        with chart_col4:
-            hist_fig = px.histogram(
-                filtered, x="final_confidence", nbins=10, title="Estimated Confidence distribution"
+        with trend_col:
+            trend_df = pd.DataFrame(
+                {
+                    "result_index": range(1, len(filtered) + 1),
+                    "final_confidence": filtered["final_confidence"].tolist(),
+                }
             )
-            st.plotly_chart(hist_fig, use_container_width=True)
+            trend_fig = px.line(
+                trend_df,
+                x="result_index",
+                y="final_confidence",
+                markers=True,
+                title="Current batch confidence trend",
+            )
+            trend_fig.update_yaxes(range=[0, 1.05])
+            st.plotly_chart(trend_fig, width="stretch")
 
         st.divider()
 
-        # --- Records table ---
-        st.subheader("All records")
-        st.dataframe(filtered.sort_values("timestamp", ascending=False), use_container_width=True)
+        st.subheader("Current analysis results")
+        st.dataframe(
+            filtered[["source_file", "category", "final_confidence", "needs_review", "flagged_keywords"]],
+            width="stretch",
+        )
 
-        # --- High estimated-confidence Poor alerts ---
         alerts = filtered[
             (filtered["category"] == "Poor") & (filtered["final_confidence"] > settings.ALERT_THRESHOLD)
         ]
         if len(alerts):
-            st.subheader("⚠️ High Estimated Confidence Poor alerts")
-            st.dataframe(alerts, use_container_width=True)
+            st.subheader("⚠️ High confidence Poor alerts")
+            st.dataframe(alerts, width="stretch")

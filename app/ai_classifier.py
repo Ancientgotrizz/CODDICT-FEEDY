@@ -6,9 +6,12 @@ The actual "ask the AI to classify this" logic. Builds the instructions
 sends it to the local Ollama model, and parses the structured reply.
 """
 
+import json
+import re
 from functools import lru_cache
 
 from langchain_ollama import ChatOllama
+from langchain_core.exceptions import OutputParserException
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
 
@@ -98,16 +101,39 @@ def build_user_message(feedback_text, neighbours):
 
 
 def calculate_neighbour_agreement(predicted_category, neighbours):
-    """Fraction of the retrieved examples sharing the predicted category (0.0-1.0)."""
+    """Weighted fraction of retrieved examples sharing the predicted category (0.0-1.0)."""
     if not neighbours:
         return 0.5
 
-    matching_count = 0
+    total_weight = 0.0
+    matching_weight = 0.0
     for neighbour in neighbours:
+        score = float(neighbour.get("score", 0.0))
+        weight = 1.0 / (1.0 + abs(score))
+        total_weight = total_weight + weight
         if neighbour["label"] == predicted_category:
-            matching_count = matching_count + 1
+            matching_weight = matching_weight + weight
 
-    return round(matching_count / len(neighbours), 2)
+    if total_weight == 0:
+        return 0.5
+
+    return round(matching_weight / total_weight, 2)
+
+
+def sanitize_model_json(raw_json):
+    """Normalizes malformed model output into valid JSON.
+
+    Some local models occasionally emit a string entry like
+    '"No" (from the recommendation question)' inside a flagged_keywords array.
+    This strips the explanatory parenthetical and keeps the literal phrase.
+    """
+    if not isinstance(raw_json, str):
+        return raw_json
+
+    sanitized = raw_json.strip()
+    sanitized = re.sub(r'"([^"\\]*(?:\\.[^"\\]*)*)"\s*\([^)]*\)', r'"\1"', sanitized)
+    sanitized = re.sub(r',\s*\n\s*"No"\s*\(from the recommendation question\)', ',\n    "No from the recommendation question"', sanitized)
+    return sanitized
 
 
 def classify_feedback(vector_store, feedback_text):
@@ -119,7 +145,14 @@ def classify_feedback(vector_store, feedback_text):
     user_message = build_user_message(feedback_text, neighbours)
 
     chain = build_classifier_chain()
-    result = chain.invoke({"user_message": user_message})
+    try:
+        result = chain.invoke({"user_message": user_message})
+    except OutputParserException as exc:
+        raw_output = getattr(exc, "llm_output", None)
+        if raw_output is None:
+            raise
+        cleaned_output = sanitize_model_json(raw_output)
+        result = FeedbackClassification.model_validate_json(cleaned_output)
 
     agreement = calculate_neighbour_agreement(result.category, neighbours)
     return result, neighbours, agreement

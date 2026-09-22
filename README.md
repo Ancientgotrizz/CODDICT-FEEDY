@@ -36,15 +36,14 @@ feedy/
 │   ├── similarity_search.py  # FAISS + embeddings similarity search
 │   ├── ai_classifier.py      # builds the prompt, calls the AI model
 │   ├── confidence_score.py   # blends 3 signals into 1 confidence number
-│   └── database.py           # reads/writes the CSV "database"
+│   └── database.py           # persists the latest evaluation summary
 ├── scripts/
 │   ├── build_search_index.py    # (re)builds the FAISS index
-│   ├── generate_sample_pdfs.py  # makes synthetic demo PDFs
+│   └── generate_sample_pdfs.py  # makes synthetic demo PDFs
+├── tests/
 │   └── test_accuracy.py         # measures confidence vs. real accuracy
 ├── data/
-│   ├── labelled_examples.json   # 40 examples (10 per category) for search
-│   ├── holdout_examples.json    # 16 examples, only used for testing
-│   ├── feedback_records.csv     # created automatically once you classify something
+│   ├── labelled_examples.json   # 300 unique generic examples for search
 │   └── sample_pdfs/             # created by generate_sample_pdfs.py
 ├── vector_index/              # the saved FAISS index (created by build_search_index.py)
 ├── requirements.txt
@@ -59,11 +58,8 @@ See **STARTUP_COMMANDS.md** for the exact commands to run, in order.
 
 ## Honest limitations
 
-- This is a local prototype: one CSV file as the database, no user
-  accounts, no cloud services.
+- This is a local prototype with no user accounts or cloud services.
 - The confidence score is an engineering estimate, not a statistically
   calibrated probability.
 - OCR needs Tesseract and Poppler installed separately as system tools
   — without them, only PDFs with a real text layer will work.
-- The 16-example holdout test is a useful diagnostic, not a
-  production-scale accuracy guarantee.

@@ -25,9 +25,8 @@ EMBEDDING_MODEL_NAME = os.getenv(
 DATA_DIR = "data"
 VECTOR_INDEX_DIR = "vector_index"
 LABELLED_EXAMPLES_FILE = os.path.join(DATA_DIR, "labelled_examples.json")
-HOLDOUT_EXAMPLES_FILE = os.path.join(DATA_DIR, "holdout_examples.json")
-FEEDBACK_RECORDS_FILE = os.path.join(DATA_DIR, "feedback_records.csv")
 SAMPLE_PDFS_DIR = os.path.join(DATA_DIR, "sample_pdfs")
+TEST_RESULTS_FILE = os.path.join(DATA_DIR, "test_accuracy_results.json")
 
 # --- Behaviour settings ---
 RETRIEVAL_K = 3            # how many similar labelled examples to retrieve

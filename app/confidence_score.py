@@ -20,8 +20,8 @@ def fuse_confidence(llm_confidence, neighbour_agreement, extraction_quality=1.0)
     extraction_quality = max(0.0, min(1.0, extraction_quality))
 
     base_confidence = (
-      (0.50 * llm_confidence)
-      + (0.30 * neighbour_agreement)
+      (0.60 * llm_confidence)
+      + (0.20 * neighbour_agreement)
       + (0.20 * extraction_quality)
     )
 
